@@ -1,82 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fortune Cookie</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f8e8d0;
-      text-align: center;
-      padding: 50px;
-    }
-
-    h1 {
-      color: #d2691e;
-    }
-
-    .cookie {
-      width: 150px;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .cookie:hover {
-      transform: scale(1.1) rotate(-5deg);
-    }
-
-    #fortune {
-      margin-top: 30px;
-      font-size: 1.5em;
-      color: #555;
-      min-height: 60px;
-      transition: opacity 0.5s ease;
-    }
-
-    .footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #999;
-    }
-  </style>
+    <title>Marquee Example</title>
 </head>
 <body>
-  <h1>🥠 Click the Cookie for Your Fortune!</h1>
-  <img 
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Fortune_cookie.jpg/320px-Fortune_cookie.jpg"
-    alt="Fortune Cookie"
-    class="cookie"
-    onclick="generateFortune()"
-  />
-  <div id="fortune"></div>
 
-  <div class="footer">Made with 🍀 and HTML</div>
+<h2>Simple Marquee</h2>
+<marquee>Welcome to my website!</marquee>
 
-  <script>
-    const fortunes = [
-      "🌟 A thrilling time is in your immediate future.",
-      "🎯 You will conquer obstacles to achieve success.",
-      "💡 A fresh start will put you on your way.",
-      "🧠 Your mind is your greatest asset.",
-      "🌈 Good news will come to you by mail.",
-      "✨ A new opportunity is just around the corner.",
-      "📚 Learning is a treasure that follows its owner everywhere.",
-      "🎉 You will soon be surrounded by good friends and laughter."
-    ];
+<h2>Marquee with direction</h2>
+<marquee direction="right">This text moves right</marquee>
 
-    function generateFortune() {
-      const randomIndex = Math.floor(Math.random() * fortunes.length);
-      const fortuneText = fortunes[randomIndex];
-      const fortuneElement = document.getElementById("fortune");
-      fortuneElement.style.opacity = 0;
+<h2>Marquee with speed and behavior</h2>
+<marquee behavior="alternate" scrollamount="10">Bouncing fast text</marquee>
 
-      setTimeout(() => {
-        fortuneElement.innerText = fortuneText;
-        fortuneElement.style.opacity = 1;
-      }, 300);
-    }
-  </script>
+<h2>Marquee with background color</h2>
+<marquee style="background-color: lightblue; color: darkblue;">Styled marquee text</marquee>
+
 </body>
 </html>
-
